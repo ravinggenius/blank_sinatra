@@ -1,0 +1,16 @@
+!!! XML
+!!!
+%html{ :xmlns => 'http://www.w3.org/1999/xhtml', 'xml:lang' => 'en'}
+  %head
+    %title= @title
+
+    / Meta
+    %meta{ 'http-equiv' => 'Content-Type', 'content' => 'text/html; charset=utf-8' }
+
+  %body
+    %div#branding.section
+      %h1#question IsItTheWeekendYet?
+
+    %div#content.section
+      %div.section.primary= yield
+      %div.section.secondary
