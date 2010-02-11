@@ -19,5 +19,5 @@ end
 
 get '/styles/screen.css' do
   content_type 'text/css', :charset => 'utf-8'
-  sass :screen
+  sass :'stylesheets/screen'
 end
