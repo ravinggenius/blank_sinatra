@@ -1,6 +1,6 @@
-require File.dirname(__FILE__) + '/vendor/gems/environment'
-
-Bundler.require_env
+require 'rubygems'
+require 'sinatra'
+require 'haml'
 
 get '/' do
   haml :index
