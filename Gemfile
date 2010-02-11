@@ -1,4 +1,4 @@
-source http://gemcutter.org
+source 'http://gemcutter.org'
 
 gem 'sinatra'
 gem 'haml'
