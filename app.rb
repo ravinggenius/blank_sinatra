@@ -6,7 +6,7 @@ require 'haml'
 configure do
   set :app_file, __FILE__
   set :root, File.dirname(__FILE__)
-  set :haml, { :format => :html5 }
+  set :haml, { :format => :html5, :attr_wrapper => '"' }
 
   Compass.configuration do |config|
     config.project_path = File.dirname(__FILE__)
@@ -17,7 +17,7 @@ configure do
 end
 
 get '/styles/:name.css' do
-  content_type 'text/css', :charset => 'utf-8'
+  content_type :css, :charset => 'utf-8'
   sass :"stylesheets/#{params[:name]}"
 end
 
