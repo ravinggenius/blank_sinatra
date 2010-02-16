@@ -1,10 +1,31 @@
 !!! XML
 !!!
-%html{ :xmlns => 'http://www.w3.org/1999/xhtml', 'xml:lang' => 'en'}
+%html{ :lang => 'en', :xmlns => 'http://www.w3.org/1999/xhtml', 'xml:lang' => 'en'}
   %head
+    %title= @title
+
     / Meta
     %meta{ 'http-equiv' => 'Content-Type', 'content' => 'text/html; charset=utf-8' }
 
+    / FavIcon
+    %link{ :rel => 'shortcut icon', :href => '' }
+
+    / CSS
+    %style{ :type => 'text/css', :media => 'all'} @import url('http://assets.ravinggenius.com/css?html5reset=1.4');
+    %style{ :type => 'text/css', :media => 'all'} @import url('/styles/application.css');
+
+    / JavaScript
+    %script{ :type => 'text/javascript', :src => 'http://assets.ravinggenius.com/js?jquery=1.4' }
+    %script{ :type => 'text/javascript', :src => '/scripts/application.js' }
+
   %body
-    %div#content.section
-      %div.section.primary= yield
+    = yield
+
+    :javascript
+      var gaJsHost = ((document.location.protocol == 'https:') ? 'https://ssl.' : 'http://www.');
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      try {
+        var pageTracker = _gat._getTracker('UA-xxxxxxx-xx');
+        pageTracker._trackPageview();
+      } catch (err) {
+      }
