@@ -4,18 +4,14 @@
   %head
     %title= @title
 
-    / Meta
     %meta{ 'http-equiv' => 'Content-Type', 'content' => 'text/html; charset=utf-8' }
 
-    / FavIcon
-    %link{ :rel => 'shortcut icon', :href => '' }
+    / %link{ :rel => 'shortcut icon', :href => '/images/favicon.ico' }
 
-    / CSS
+    %script{ :type => 'text/javascript', :src => 'http://assets.ravinggenius.com/js?modernizr=1.1&jquery=1.4' }
     %style{ :type => 'text/css', :media => 'all'} @import url('http://assets.ravinggenius.com/css?html5reset=1.4');
-    %style{ :type => 'text/css', :media => 'all'} @import url('/styles/application.css');
 
-    / JavaScript
-    %script{ :type => 'text/javascript', :src => 'http://assets.ravinggenius.com/js?jquery=1.4' }
+    %style{ :type => 'text/css', :media => 'all'} @import url('/styles/application.css');
     %script{ :type => 'text/javascript', :src => '/scripts/application.js' }
 
     :javascript
@@ -32,7 +28,14 @@
       })();
 
   %body
-    = yield
+    %header{ :id => 'branding' }
+      %span{ :class => 'h' }
+
+    %section{ :id => 'content' }
+      = yield
+
+    %footer{ :id => 'credits' }
+      %p &copy; 2010 Thomas Ingram
 
     %script{ :type => 'text/javascript', :src => '//static.woopra.com/js/woopra.v2.js' }
     :javascript
