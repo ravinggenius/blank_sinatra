@@ -1,1 +1,1 @@
-Experimental Sinatra project using Compass.
+Sinatra project using Compass.

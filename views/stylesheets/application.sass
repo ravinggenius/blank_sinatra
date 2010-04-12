@@ -1,8 +1,107 @@
-@import base.sass
+@font-face
+  font-family: Delicious
+  src: url('Delicious-Roman.otf')
 
-+blueprint-typography
-+blueprint-utilities
-+blueprint-grid
-+blueprint-debug("/images/grid.png")
-+blueprint-interaction
-+blueprint-form
+@font-face
+  font-family: Daniel
+  src: url('/fonts/Daniel_J_-_Deka.otf')
+
+@font-face
+  font-family: Kimberley
+  src: url(http://www.princexml.com/fonts/larabie/kimberle.ttf) format("truetype")
+
+body
+  background: #333333 url('/images/background_FFFFFF.png') no-repeat top left
+  color: #FFFFFF
+  font-family: monospace, Daniel, 'Liberation Sans', Helvetica, monospace
+  min-width: 900px
+  max-width: 960px
+  margin: 0 auto
+
+a
+  color: #FFFFFF
+  img
+    border: none
+
+p
+  margin-bottom: 1em
+
+.h
+  font-weight: bold
+  display: inline-block
+
+form
+  fieldset
+    legend
+      margin-bottom: 1em
+    ul
+      li
+        list-style-type: none
+        margin-bottom: 1em
+        label
+          display: block
+          margin-bottom: 0.25em
+        input
+          width: 15em
+        textarea
+          width: 30em
+          height: 10em
+        button
+      li.required
+        label:after
+          content: '*'
+
+.project
+  img
+.featured_project
+  img
+
+#branding,
+#main_menu,
+#content,
+#credits
+  width: 100%
+
+#branding
+  margin-top: 2em
+  margin-bottom: 2em
+  a
+    text-decoration: none
+  img
+    vertical-align: -1em
+  .h
+    font-size: 4.5em
+  span
+    white-space: nowrap
+
+#main_menu
+  text-align: right
+  ul
+    margin-top: 1em
+    margin-bottom: 2em
+    li
+      display: inline-block
+      a
+      #hire_me
+        font-weight: bold
+
+#content
+  .primary,
+  .secondary
+    width: 50%
+  .primary
+    text-align: left
+    float: left
+  .secondary
+    text-align: right
+    float: right
+    video
+      background-color: #EEEEEE
+  .secondary_alt
+    text-align: left
+
+#credits
+  clear: both
+  margin-top: 2em
+  margin-bottom: 3em
+  text-align: center
