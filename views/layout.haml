@@ -13,18 +13,7 @@
     %style{ :type => 'text/css', :media => 'all'} @import url('/styles/application.css');
     %script{ :type => 'text/javascript', :src => '/scripts/application.js' }
 
-    :javascript
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-xxxxxxx-xx']);
-      _gaq.push(['_trackPageview']);
-
-      (function () {
-        var ga = document.createElement('script');
-        ga.type = 'text/javascript';
-        ga.async = true;
-        ga.src = ('https:' === document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
-      })();
+    = partial :tracking_google, :google_analytics_tracking_code => 'UA-xxxxxxx-xx'
 
   %body
     %header#branding
@@ -40,8 +29,6 @@
       = yield
 
     %footer#credits
-      %p= "&copy; 2010 #{@site_name}"
+      %p#copyright= "&copy; #{@site_name}"
 
-    %script{ :type => 'text/javascript', :src => '//static.woopra.com/js/woopra.v2.js' }
-    :javascript
-      woopraTracker.track();
+    = partial :tracking_woopra

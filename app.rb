@@ -37,17 +37,15 @@ helpers do
 
   alias_method :h, :escape_html
 
-  def featured_project project, options = {}
-    @project = project
-    @project.is_special = options[:is_special] || false
-    partial :featured_project
-  end
-
-  def partial name, options = {}
-    name = name.to_s
-    name = "_#{name}" unless name.start_with? '_'
+  def partial name, locals = {}, options = {}
     options[:layout] = :none
-    haml name.to_sym, options
+    options[:locals] ||= {}
+    options[:locals].merge! locals
+    begin
+      haml name.to_sym, options
+    rescue
+      haml "shared/#{name}".to_sym, options
+    end
   end
 end
 
