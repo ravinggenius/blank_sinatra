@@ -1,14 +1,13 @@
 source :rubygems
 
-gem 'sinatra', '~> 1.0'
-gem 'haml', '~> 3.0'
-gem 'compass', '~> 0.10.1'
-gem 'pony', '~> 0.9'
+gem 'compass',               '~> 0.10'
+gem 'haml',                  '~> 3.0'
+gem 'sinatra',               '~> 1.0'
+gem 'pony',                  '~> 0.9'
 
 group :development do
   gem 'awesome_print'
   gem 'hirb'
-  gem 'rails3-generators'
   gem 'ruby-debug'
 end
 
@@ -18,6 +17,6 @@ group :production do
 end
 
 group :test do
-  gem 'shoulda'
   gem 'json'
+  gem 'shoulda'
 end
