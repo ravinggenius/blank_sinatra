@@ -37,7 +37,7 @@ helpers do
 
   alias_method :h, :escape_html
 
-  def partial name, locals = {}, options = {}
+  def partial(name, locals = {}, options = {})
     options[:layout] = :none
     options[:locals] ||= {}
     options[:locals].merge! locals
