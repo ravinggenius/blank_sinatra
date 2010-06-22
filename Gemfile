@@ -13,7 +13,7 @@ end
 
 group :production do
   gem 'thin'
-  gem 'pg'
+  #gem 'pg'
 end
 
 group :test do
