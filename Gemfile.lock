@@ -11,7 +11,7 @@ dependencies:
   pony: 
     group: 
     - :default
-    version: ~> 0.9
+    version: ~> 1.0
   haml: 
     group: 
     - :default
@@ -41,6 +41,8 @@ dependencies:
     - :test
     version: ">= 0"
 specs: 
+- activesupport: 
+    version: 2.3.8
 - awesome_print: 
     version: 0.2.1
 - columnize: 
@@ -61,10 +63,14 @@ specs:
     version: "0.43"
 - mime-types: 
     version: "1.16"
-- tmail: 
-    version: 1.2.7.1
+- polyglot: 
+    version: 0.3.1
+- treetop: 
+    version: 1.4.8
+- mail: 
+    version: 2.2.5
 - pony: 
-    version: 0.9.1
+    version: "1.0"
 - rack: 
     version: 1.2.1
 - ruby-debug-base: 
@@ -77,7 +83,7 @@ specs:
     version: "1.0"
 - thin: 
     version: 1.2.7
-hash: 53de6409a6617d100bf34de638786cafe359be99
+hash: a45be3c50097084b01fd309996a08e8482f194b2
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
