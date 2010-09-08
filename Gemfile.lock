@@ -1,89 +1,54 @@
---- 
-dependencies: 
-  compass: 
-    group: 
-    - :default
-    version: ~> 0.10
-  ruby-debug: 
-    group: 
-    - :development
-    version: ">= 0"
-  pony: 
-    group: 
-    - :default
-    version: ~> 1.0
-  haml: 
-    group: 
-    - :default
-    version: ~> 3.0
-  shoulda: 
-    group: 
-    - :test
-    version: ">= 0"
-  thin: 
-    group: 
-    - :production
-    version: ">= 0"
-  hirb: 
-    group: 
-    - :development
-    version: ">= 0"
-  sinatra: 
-    group: 
-    - :default
-    version: ~> 1.0
-  awesome_print: 
-    group: 
-    - :development
-    version: ">= 0"
-  json: 
-    group: 
-    - :test
-    version: ">= 0"
-specs: 
-- activesupport: 
-    version: 2.3.8
-- awesome_print: 
-    version: 0.2.1
-- columnize: 
-    version: 0.3.1
-- haml: 
-    version: 3.0.13
-- compass: 
-    version: 0.10.2
-- daemons: 
-    version: 1.1.0
-- eventmachine: 
-    version: 0.12.10
-- hirb: 
-    version: 0.3.2
-- json: 
-    version: 1.4.3
-- linecache: 
-    version: "0.43"
-- mime-types: 
-    version: "1.16"
-- polyglot: 
-    version: 0.3.1
-- treetop: 
-    version: 1.4.8
-- mail: 
-    version: 2.2.5
-- pony: 
-    version: "1.0"
-- rack: 
-    version: 1.2.1
-- ruby-debug-base: 
-    version: 0.10.3
-- ruby-debug: 
-    version: 0.10.3
-- shoulda: 
-    version: 2.11.1
-- sinatra: 
-    version: "1.0"
-- thin: 
-    version: 1.2.7
-hash: a45be3c50097084b01fd309996a08e8482f194b2
-sources: 
-- Rubygems: 
-    uri: http://gemcutter.org
+GEM
+  remote: http://rubygems.org/
+  specs:
+    activesupport (3.0.0)
+    awesome_print (0.2.1)
+    columnize (0.3.1)
+    compass (0.10.5)
+      haml (>= 3.0.4)
+    daemons (1.1.0)
+    eventmachine (0.12.10)
+    haml (3.0.18)
+    hirb (0.3.3)
+    i18n (0.4.1)
+    json (1.4.6)
+    linecache (0.43)
+    mail (2.2.5)
+      activesupport (>= 2.3.6)
+      mime-types
+      treetop (>= 1.4.5)
+    mime-types (1.16)
+    polyglot (0.3.1)
+    pony (1.0.1)
+      mail (> 2.0)
+    rack (1.2.1)
+    ruby-debug (0.10.3)
+      columnize (>= 0.1)
+      ruby-debug-base (~> 0.10.3.0)
+    ruby-debug-base (0.10.3)
+      linecache (>= 0.3)
+    shoulda (2.11.3)
+    sinatra (1.0)
+      rack (>= 1.0)
+    thin (1.2.7)
+      daemons (>= 1.0.9)
+      eventmachine (>= 0.12.6)
+      rack (>= 1.0.0)
+    treetop (1.4.8)
+      polyglot (>= 0.3.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  awesome_print
+  compass (~> 0.10)
+  haml (~> 3.0)
+  hirb
+  i18n
+  json
+  pony (~> 1.0)
+  ruby-debug
+  shoulda
+  sinatra (~> 1.0)
+  thin
