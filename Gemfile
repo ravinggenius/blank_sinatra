@@ -1,11 +1,11 @@
 source :rubygems
 
 gem 'compass',               '~> 0.10'
-gem 'haml',                  '~> 3.0'
+gem 'haml',                  '~> 3'
 gem 'i18n'
-gem 'pony',                  '~> 1.0'
+gem 'pony',                  '~> 1'
 #gem 'rack-tidy'              '~> 0.2'
-gem 'sinatra',               '~> 1.0'
+gem 'sinatra',               '~> 1'
 
 group :development do
   gem 'awesome_print'
@@ -14,8 +14,8 @@ group :development do
 end
 
 group :production do
-  gem 'thin'
   #gem 'pg'
+  gem 'thin'
 end
 
 group :test do
