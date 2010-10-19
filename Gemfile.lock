@@ -1,19 +1,19 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    activesupport (3.0.0)
+    activesupport (3.0.1)
     awesome_print (0.2.1)
     columnize (0.3.1)
     compass (0.10.5)
       haml (>= 3.0.4)
     daemons (1.1.0)
     eventmachine (0.12.10)
-    haml (3.0.18)
+    haml (3.0.22)
     hirb (0.3.4)
     i18n (0.4.1)
     json (1.4.6)
     linecache (0.43)
-    mail (2.2.6.1)
+    mail (2.2.7)
       activesupport (>= 2.3.6)
       mime-types
       treetop (>= 1.4.5)
@@ -43,12 +43,12 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   compass (~> 0.10)
-  haml (~> 3.0)
+  haml (~> 3)
   hirb
   i18n
   json
-  pony (~> 1.0)
+  pony (~> 1)
   ruby-debug
   shoulda
-  sinatra (~> 1.0)
+  sinatra (~> 1)
   thin
