@@ -2,7 +2,6 @@ source :rubygems
 
 gem 'compass',               '~> 0.10'
 gem 'haml',                  '~> 3'
-gem 'i18n'
 gem 'pony',                  '~> 1'
 #gem 'rack-tidy'              '~> 0.2'
 gem 'sinatra',               '~> 1'
